@@ -1,0 +1,234 @@
+// BUTTONS
+.btn{
+    padding: 1rem 2rem;
+    background-color: $light-color;
+    color: $primary-color;
+    font-size: 1.3rem;
+    border:none;
+    outline: none;
+    letter-spacing: 2px;
+    
+    @include media(small){
+        padding:0.5rem 1rem;
+    }
+
+
+    &:hover{
+        background-color: $primary-color;
+        color: $light-color;
+        transition: all .5s;
+        
+    }
+
+    &-primary{
+        background-color: $primary-color;
+        color: $light-color;
+        &:hover{
+            background-color: $light-color;
+            color: $primary-color;
+        }
+    }
+}
+
+// BADGES
+
+.badge{
+    border: none;
+    padding: .2rem 2.4rem;
+    font-size: 1.6rem;
+    color: $light-color;
+    background-color: $primary-color;
+    margin: 5rem;
+    
+}
+
+// RATINGS
+.rating{
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    top:1rem;
+    left: 1rem;
+    background-color:rgba($light-color,  .5);
+    opacity: 0;
+    z-index:1;
+    line-height: 3rem;
+    font-size: 1.4rem;
+    font-family: $primary-font;
+    text-align: center;
+    transition: all .5s;
+    border-radius: 50%;
+    color: $secondary-color;
+    font-weight:bold;
+
+}
+
+// REVIEWS
+
+.review{
+    padding:4rem;
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+    margin-left:8rem;
+    border-left: 1px solid $primary-color;
+    border-bottom: 1px solid $primary-color;
+    transform: skew(-28deg);
+
+    @include media(large){
+        transform: skew(0deg);
+        border: none;
+        margin-left: 0;
+    }    
+
+    & > *{
+        transform: skew(28deg);
+        @include media(large){
+            transform: skew(0deg);
+        }
+    }
+
+    // &-title{
+       
+    // }
+
+    &-tags{
+        font-size: 1.5 rem;
+        color:$light-color;
+        text-transform: uppercase;
+        margin-top: 1rem;
+    }
+
+    &-text{
+        margin:1rem 0;
+
+
+    }
+
+    &-user{
+      display: flex;
+      align-items: center;
+        
+        img{
+            width: 8rem;
+            height: 8rem;
+            margin-right: 3rem;
+            border-radius: 50%;
+        }
+
+        &-detail{
+            font-family:$primary-font ;
+            // margin-right: 3rem;
+
+            .review-user-name{
+                color:$primary-color;
+            }
+
+            .review-user-date{
+                color:$date-color;
+            }            
+        }
+        
+        &-platform{
+            margin-left: 2rem;
+            :not(:last-child){
+                color:$primary-color;
+            }
+
+            .fab{
+                margin:0 1rem ;
+            }
+        }
+
+        &-rating{
+            margin-left: auto;
+
+            .checked{
+                color:$primary-color ;
+            }
+        }
+    }
+}
+
+// CARDS
+
+.card{
+    // background-color: red;
+    height: 40rem;
+    cursor: pointer;
+
+    @include media(large){
+        height: 35rem;
+    }
+    @include media(medium){
+        height:30rem;
+    }
+    @include media(small){
+        height:18rem;
+        margin:2px;
+    }
+   
+    &-inner{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+    }
+
+    .card-front, .card-back{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        transition: all 1s;
+    }
+
+    .card-front{
+        background-color: $primary-color;
+    }
+
+    .card-back{
+        background-color: $secondary-color;
+        transform: rotateY(180deg);
+        backface-visibility: hidden;
+        display: table;
+        &-content{
+            display: table-cell;
+            vertical-align: middle;
+            line-height:4rem;
+        }
+
+        p{
+            font-size: 2rem;
+            font-weight: bold;
+            @include media(small){
+                font-size:1.5rem;
+            }
+        }
+       
+
+        a{
+            :hover{
+                color: $primary-color;
+                transition:all .5s;
+            }
+
+            i{
+                margin: 0.5rem;
+
+                @include media(medium){
+                    font-size:2rem;
+                }
+            }
+        }
+
+    }
+
+    &:hover .card-front{
+        transform: rotateY(180deg);
+    }
+
+    &:hover .card-back{
+        transform: none;
+    }
+}
