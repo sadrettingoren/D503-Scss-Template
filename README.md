@@ -14,5 +14,7 @@
 ![compatibility_section](https://github.com/sadrettingoren/D503-Scss-Template/assets/102412396/d5816357-21db-4c6a-9156-5dd7a27eb13f)
 
 #CONTACT SECTION
+![contact_section](https://github.com/sadrettingoren/D503-Scss-Template/assets/102412396/789b4c07-dad2-4bbf-9dde-08aecf20fbad)
+
 
 
