@@ -1,7 +1,6 @@
 # D503-Scss-Template
  Bu projemde D503-GAME PORTAL adlı UI kısmı dinamik, responsive uyumlu web sitesi tasarladım.
  
- 
  Kullandığım teknolojiler: HTML5, CSS3, JAVASCRIPT, SCSS/SASS
  
  
